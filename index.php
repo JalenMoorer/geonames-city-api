@@ -79,8 +79,8 @@ $app->get( '/city', function () {
 });
 
 
-$app->get('/hello/:name', function ($name) {
-    echo "Hello, " . $name;
+$app->get('/', function () {
+    echo "# geonames-city-api This is a simple api created using the php microframework Slim ";
 });
 
 $app->run();
