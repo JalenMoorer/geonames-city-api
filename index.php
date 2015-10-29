@@ -61,6 +61,7 @@ $app->get( '/city', function () {
             if($cities) {
                 $app->response->setStatus(200);
                 $app->response()->headers->set('Content-Type', 'application/json');
+                $app->$response->header('Access-Control-Allow-Origin', '*');
                 echo json_encode($cities);
                 $db = null;
             } else {
